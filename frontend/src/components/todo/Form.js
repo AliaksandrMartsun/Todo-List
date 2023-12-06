@@ -3,17 +3,17 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addTodo } from '../../actions/todos';
 
-export class Form extends Component {
+class Form extends Component {
+
     state = {
         title: '',
-        description: ''
-    }
-
-    static propTypes = {
-        addTodo: PropTypes.func.isRequired,
+        description: '',
+        message: ''
     };
 
-    onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+    static propTypes = {
+        addTodo: PropTypes.func.isRequired
+    };
 
     onSubmit = (e) => {
         e.preventDefault();
@@ -26,36 +26,35 @@ export class Form extends Component {
         });
     };
 
+    onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+
     render() {
         const { title, description } = this.state;
+
         return (
-            <div className="card card-body mt-4 mb-4">
-                <h2>Add Todo</h2>
+            <div className='card card-body mt-4 mb-4'>
+                <h2>Add todo</h2>
                 <form onSubmit={this.onSubmit}>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label>Title</label>
                         <input
-                            className="form-control"
-                            type="text"
-                            name="title"
+                            type='text'
+                            className='form-control'
+                            name='title'
                             onChange={this.onChange}
-                            value={title}
-                        />
+                            value={title} />
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label>Description</label>
                         <input
-                            className="form-control"
-                            type="text"
-                            name="description"
+                            type='text'
+                            className='form-control'
+                            name='description'
                             onChange={this.onChange}
-                            value={description}
-                        />
+                            value={description} />
                     </div>
-                    <div className="form-group">
-                        <button type="submit" className="btn btn-primary">
-                            Submit
-                        </button>
+                    <div className='form-group'>
+                        <button type='submit' className='btn btn-primary'>Add</button>
                     </div>
                 </form>
             </div>
