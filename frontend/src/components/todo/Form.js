@@ -8,7 +8,6 @@ class Form extends Component {
     state = {
         title: '',
         description: '',
-        message: ''
     };
 
     static propTypes = {

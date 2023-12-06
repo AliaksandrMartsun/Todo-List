@@ -1,0 +1,23 @@
+[33mcommit bd730ee06c9c283e503a176d7b4bb71956ee1f58[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: AliaksandrMartsun <Aliaksandr.martsun@gmail.com>
+Date:   Wed Dec 6 14:56:34 2023 +0300
+
+    django api errors
+
+[33mcommit 2e3b423b0ea643d00d4f1a8387960de09d5f971a[m
+Author: AliaksandrMartsun <Aliaksandr.martsun@gmail.com>
+Date:   Tue Dec 5 17:11:08 2023 +0300
+
+    django api
+
+[33mcommit 67e1e52fea557c9ae97ce51c1d87d1a2eefa0fc0[m
+Author: AliaksandrMartsun <Aliaksandr.martsun@gmail.com>
+Date:   Tue Dec 5 13:13:37 2023 +0300
+
+    api work version
+
+[33mcommit eb95a801d43aeeda00249072d6ada2d559f5f189[m
+Author: AliaksandrMartsun <Aliaksandr.martsun@gmail.com>
+Date:   Tue Dec 5 12:55:21 2023 +0300
+
+    initial commit

@@ -1,6 +1,5 @@
 import axios from 'axios';
-import { createMessage, returnErrors } from './messages';
-import { GET_TODO_LIST, ADD_TODO, DELETE_TODO, TOGGLE_TODO, GET_ERRORS } from './types';
+import { GET_TODO_LIST, ADD_TODO, DELETE_TODO, TOGGLE_TODO } from './types';
 
 axios.defaults.xsrfHeaderName = 'X-CSRFTOKEN';
 axios.defaults.xsrfCookieName = 'csrftoken';
@@ -13,14 +12,13 @@ export const getTodos = () => dispatch => {
                 type: GET_TODO_LIST,
                 payload: result.data
             });
-        }).catch(error => dispatch(returnErrors(error.response.data, error.response.status)));
+        }).catch(error => console.log(error));
 };
 
 //Delete todo
 export const deleteTodo = (id) => dispatch => {
     axios.delete(`api/todo/${id}/`)
         .then(result => {
-            dispatch(createMessage({todoDeleted: "Todo deleted!"}));
             dispatch({
                 type: DELETE_TODO,
                 payload: id
@@ -44,10 +42,9 @@ export const toggleTodo = (todo) => dispatch => {
 export const addTodo = (todo) => dispatch => {
     axios.post('api/todo/', todo)
         .then(result => {
-            dispatch(createMessage({todoAdded: "Todo added!"}));
             dispatch({
                 type: ADD_TODO,
                 payload: result.data
             });
-        }).catch(error => dispatch(returnErrors(error.response.data, error.response.status)));
+        }).catch(error => console.log(error));
 };

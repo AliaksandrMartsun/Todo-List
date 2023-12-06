@@ -17,10 +17,6 @@ class Todo(models.Model):
     category = models.ForeignKey('Category',
                                  on_delete=models.PROTECT,
                                  null=True)
-    owner = models.ForeignKey(User,
-                              related_name='todos',
-                              on_delete=models.CASCADE,
-                              null=True)
 
     def __str__(self):
         return self.title

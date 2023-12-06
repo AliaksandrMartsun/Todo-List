@@ -9,7 +9,8 @@ class List extends Component {
         todos: PropTypes.array.isRequired,
         getTodos: PropTypes.func.isRequired,
         toggleTodo: PropTypes.func.isRequired,
-        deleteTodo: PropTypes.func.isRequired
+        deleteTodo: PropTypes.func.isRequired,
+        addTodo: PropTypes.func.isRequired
     };
 
     componentDidMount() {
@@ -40,6 +41,9 @@ class List extends Component {
                                 <td><button
                                     onClick={this.props.deleteTodo.bind(this, todo.id)}
                                     className='btn btn-danger btn-sm'>Delete</button></td>
+                                <td><button
+                                    onClick={this.props.addTodo.bind(this, todo.id)}
+                                    className='btn btn-danger btn-sm'>add</button></td>
                             </tr>
                         ))}
                     </tbody>
@@ -54,4 +58,4 @@ const mapStateToProps = (state) => ({
     todos: state.todos.todos
 });
 
-export default connect(mapStateToProps, { getTodos, deleteTodo, toggleTodo })(List);
+export default connect(mapStateToProps, { getTodos, deleteTodo, toggleTodo, addTodo })(List);
