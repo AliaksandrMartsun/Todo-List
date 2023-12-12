@@ -16,7 +16,7 @@ git clone ссылка_сгенерированная_в_вашем_репози
 python -m venv venv
 4) Активировать виртуальное окружение
 5) Устанавливить зависимости:
-pip install -r req.txt
+pip install -r requirements.txt
 6) Выполнить команду для выполнения миграций
 python manage.py migrate
 7) Создать суперпользователя
