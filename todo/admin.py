@@ -18,3 +18,7 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('id', 'title')
     list_display_links = ('title',)
     search_fields = ('title',)
+
+
+admin.site.site_title = 'To do List'
+admin.site.site_header = 'To do List'
