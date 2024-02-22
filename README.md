@@ -1,7 +1,6 @@
 <h2 align="center">To do List</h2>
 
-**Инструменты разработки**
-**Стек:**
+**Stack:**
 
 - Python >= 3.12.0
 - Django >= 4.2.4
