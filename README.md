@@ -7,18 +7,16 @@
 - Django >= 4.2.4
 - Nodejs >= 20.10.0
 - SQLite3
-Разработка
-1) Сделать форк репозитория и поставить звездочку)
-2) Клонировать репозиторий
-git clone ссылка_сгенерированная_в_вашем_репозитории
-3) Создать виртуальное окружение
-python -m venv venv
-4) Активировать виртуальное окружение
-5) Устанавливить зависимости:
-pip install -r requirements.txt
-6) Выполнить команду для выполнения миграций
-python manage.py migrate
-7) Создать суперпользователя
-python manage.py createsuperuser
-8) Запустить сервер
-python manage.py runserver
+
+##### 1) Clone a repository
+- git clone https://github.com/AliaksandrMartsun/Todo-List.git
+##### 2) Create a new virtual environment:
+- python -m venv venv
+##### 3) Activate a new virtual environment:
+- venv\bin\activate
+##### 4) Install packages:
+- pip install -r requirements.txt
+##### 5) Run project dependencies, migrations, fill the database with the fixture data etc.:
+- python manage.py migrate
+- python manage.py createsuperuser
+- python manage.py runserver
